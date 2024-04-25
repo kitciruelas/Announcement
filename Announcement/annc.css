@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    
+
+}
+.announcements table {
+    border-collapse: collapse; /* Collapse borders into a single border */
+    width: 900px; /* Set a fixed width for the table */
+    max-width: 900px; /* Set a maximum width for the table */
+    margin: 0 auto; /* Center the table horizontally */
+    border: 1px solid #ccc; /* Add border to the table */
+    padding: 10px; /* Add padding to the table */
+    border-radius: 5px; /* Add border-radius to the table */
+    margin-bottom: 20px; /* Add margin at the bottom of the table */
+    overflow: hidden; /* Hide overflowing content */
+    word-wrap: break-word; /* Allow long words to wrap */
+}
+
+
+
+.announcements th,
+.announcements td {
+    border: 1px solid #ccc; /* Add border to cells */
+    padding: 10px; /* Add padding inside cells */
+    text-align: left; /* Align text to the left within cells */
+    width: 250px; /* Set the width of the header cells */
+}
+
+.announcements th {
+    background-color: #f2f2f2; /* Add background color to header cells */
+    font-weight: bold; /* Make header text bold */
+    padding: 15px; /* Add padding around the text */
+}
+
+
+
+.announcement h3 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px; /* Add space below the first paragraph */
+}
+
+.announcement p {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 10px; /* Add space below the first paragraph */
+}
+
+.add-announcement {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+.announcement-options {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+.announcement-option p:last-child {
+    font-weight: bold;
+    font-size: 1.2em; /* adjust the size as needed */
+  }
+
+.add-announcement {
+    margin-left: auto;
+}
+
+.add-announcement:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the search input field */
+#announcement-search {
+    width: 30%; /* Set the width to fill the container */
+    padding: 8px; /* Add padding for better appearance */
+    margin: 20px auto; /* Center the input field horizontally and vertically */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+/* Style for the placeholder text */
+#announcement-search::placeholder {
+    color: #999; /* Set placeholder text color */
+}
+
+/* Style for the input field when focused */
+#announcement-search:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Change border color when focused */
+}
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px; /* Increase padding for more space */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Increase border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow for elevation */
+    z-index: 9999; /* Ensure it appears above other content */
+    max-width: 80%; /* Adjust the maximum width as needed */
+}
+
+.popup-form h3 {
+    margin-top: 0;
+    font-size: 24px; /* Increase font size for the title */
+}
+
+.popup-form label {
+    margin-bottom: 15px; /* Increase margin bottom for labels */
+    font-size: 18px; /* Increase font size for labels */
+}
+
+.popup-form input[type="text"],
+.popup-form textarea {
+    width: 100%;
+    padding: 12px; /* Increase padding for input fields */
+    margin-bottom: 20px; /* Increase margin bottom for input fields */
+    font-size: 16px; /* Increase font size for input fields */
+}
+
+.popup-form button {
+    padding: 12px 20px; /* Increase padding for buttons */
+    font-size: 16px; /* Increase font size for buttons */
+}
+
+.popup-form .input-container {
+    margin-bottom: 20px; /* Increase margin bottom for input containers */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 110px);
+    padding: 5px;
+    box-sizing: border-box;
+    
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.cancel-announcement {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.cancel-announcement:hover {
+    background-color: #c82333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.no-announcements {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ccc;
+}
+.input-container {
+    margin-bottom: 20px;
+}
+button[type="submit"], .cancel-announcement {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover, .cancel-announcement:hover {
+    background-color: #0056b3;
+}
+
+/* Base button styles */
+/* Container for the button */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px; /* Optional: Add padding for spacing */
+}
+
+/* Base button styles */
+.delete-button {
+    padding: 5px 15px;
+    background-color: #ff6347; /* Coral color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    float: right; /* Move button to the right */
+}
+
+/* Button hover effect */
+.delete-button:hover {
+    background-color: #ff4837; /* Darker coral color on hover */
+}
+
+/* Optional: Adjust styles for different states */
+.delete-button:active {
+    background-color: #cc412d; /* Darker coral color on click */
+}
+
+/* Base button styles */
+.update-button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.update-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Optional: Adjust styles for different states */
+.update-button:active {
+    background-color: #004080; /* Darker blue color on click */
+}
+
+/* Icon styles */
+/* Icon styles */
+.update-icon {
+    margin-right: 5px; /* Add space between icon and text */
+    font-size: 15px; /* Change the size of the icon */
+}
+
+
+
